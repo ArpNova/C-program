@@ -19,6 +19,12 @@
     
     //check if the date is valid or not
     if(a.year%4==0){
+     if(a.day>31||a.month>12||a.year<0){
+       printf("Your input date is invalid");
+        return 0;
+     }
+      
+ 
     int p = (a.year/100);
     if (a.year=p*100)
     {
@@ -39,12 +45,13 @@
             printf("Your input date is invalid");
             return 0;
         }
-    }
-    else if(a.day>31||a.month>12||a.year<0){
+        else if(a.day>31||a.month>12||a.year<0){
         printf("The date which you input is incorrect");
         return 0;
 
     }
+    }
+    
     
     //let a.year=2024
     a.ew = a.year - 1;//2023
