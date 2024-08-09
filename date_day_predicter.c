@@ -28,7 +28,7 @@
       
  
     int p = (year/100);
-    if (year=p*100)
+    if (year==p*100)
     {
        if (year%400!=0)
        {
