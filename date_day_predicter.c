@@ -15,20 +15,22 @@
     scanf("%d",&a.month);
     printf("enter year: ");
     scanf("%d",&a.year);
+
+    int year=a.year;
     
     
     //check if the date is valid or not
-    if(a.year%4==0){
-     if(a.day>31||a.month>12||a.year<0){
+    if(year%4==0){
+     if(a.day>31||a.month>12||year<0){
        printf("Your input date is invalid");
         return 0;
      }
       
  
-    int p = (a.year/100);
-    if (a.year=p*100)
+    int p = (year/100);
+    if (year=p*100)
     {
-       if (a.year%400!=0)
+       if (year%400!=0)
        {
         if(a.month==2&&a.day==29){
             printf("Your input date is invalid");
@@ -40,12 +42,12 @@
     }
     }
     
-    if(a.year%4!=0){
+    if(year%4!=0){
         if(a.month==2&&a.day>28){
             printf("Your input date is invalid");
             return 0;
         }
-        else if(a.day>31||a.month>12||a.year<0){
+        else if(a.day>31||a.month>12||year<0){
         printf("The date which you input is incorrect");
         return 0;
 
